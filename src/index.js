@@ -7,13 +7,14 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "rsuite/dist/rsuite.min.css";
 
 import App from "./App";
-import Academic from "./pages/academic";
-import Academic1 from "./pages/academic-1/academic-1";
-import QA from "./pages/QA/q&a";
-import Research from "./pages/researcher/researcher";
-import HighPositioning from "./pages/high-positioning/page";
-import Academic2 from "./pages/academic-2/page";
-import CheckList from "./pages/checklist/page";
+import Academic from "./pages/HR/academic";
+import Academic1 from "./pages/HR/academic-1/academic-1";
+import QA from "./pages/HR/QA/q&a";
+import Research from "./pages/HR/researcher/researcher";
+import HighPositioning from "./pages/HR/high-positioning/page";
+import Academic2 from "./pages/HR/academic-2/page";
+import CheckList from "./pages/HR/checklist/page";
+import PageHR from "./pages/HR/page";
 
 const router = createBrowserRouter([
   {
@@ -24,8 +25,13 @@ const router = createBrowserRouter([
     path: "/home",
     element: <App />,
   },
+
   {
     path: "/pages/academic",
+    element: <PageHR />,
+  },
+  {
+    path: "/pages/academic/page",
     element: <Academic />,
   },
   {

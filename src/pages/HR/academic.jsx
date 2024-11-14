@@ -1,6 +1,6 @@
 import { React, useState } from "react";
-import Footer from "../component/footer";
-import Navbar from "../component/navbar";
+import Footer from "../../component/footer";
+import Navbar from "../../component/navbar";
 import { Calendar, Badge } from "rsuite";
 import { Link } from "react-router-dom";
 
@@ -33,13 +33,13 @@ export default function Academic() {
       <Navbar />
       <div className="relative">
         <div className=" bg-gradient-to-b from-gray-100 to-gray-50 h-full">
-          <div className="container mx-auto max-w-5xl py-[100px] md:py-[150px] px-10 sm:px-20 md:px-0  ">
+          <div className="container mx-auto max-w-5xl py-10  px-10 sm:px-20 md:px-0  ">
             <div className="grid grid-cols-2 md:grid-cols-5 gap-2">
               <Link
                 to="/pages/academic/1"
                 className=" hover:scale-105 rounded-lg hover:shadow-sm hover:border flex items-center 
             justify-center cursor-pointer text-center text-gray-600 font-[500] duration-500 transition ease-in-out 
-            hover:bg-gradient-to-t from-slate-400 to-slate-300 hover:text-white"
+            hover:bg-gradient-to-t from-[#9e76b4] to-[#5eafd2] hover:text-white hover:no-underline"
               >
                 <div className="flex flex-col items-center justify-center gap-1">
                   <img
@@ -58,7 +58,7 @@ export default function Academic() {
                 target="_blank"
                 className=" hover:scale-105 rounded-lg hover:shadow-sm hover:border flex items-center 
             justify-center cursor-pointer text-center text-gray-600 font-[500] duration-500 transition ease-in-out 
-            hover:bg-gradient-to-t from-slate-400 to-slate-300 hover:text-white"
+            hover:bg-gradient-to-t from-[#9e76b4] to-[#5eafd2] hover:text-white hover:no-underline"
               >
                 <div className="flex flex-col items-center justify-center gap-1">
                   <img
@@ -75,7 +75,7 @@ export default function Academic() {
                 to={"/pages/academic/q&a"}
                 className="hover:scale-105 rounded-lg hover:shadow-sm hover:border flex items-center 
             justify-center cursor-pointer text-center text-gray-600 text-[30px] font-[600] duration-500 transition ease-in-out 
-            hover:bg-gradient-to-t from-slate-400 to-slate-300 hover:text-white"
+            hover:bg-gradient-to-t from-[#9e76b4] to-[#5eafd2] hover:text-white hover:no-underline"
               >
                 <div className="flex flex-col items-center justify-center ">
                   <img
@@ -88,7 +88,7 @@ export default function Academic() {
                 to={"/pages/academic/2"}
                 className="hover:scale-105 rounded-lg hover:shadow-sm hover:border flex items-center 
             justify-center cursor-pointer text-center text-gray-600 font-[500] duration-500 transition ease-in-out 
-            hover:bg-gradient-to-t from-slate-400 to-slate-300 hover:text-white"
+            hover:bg-gradient-to-t from-[#9e76b4] to-[#5eafd2] hover:text-white hover:no-underline"
               >
                 <div className="flex flex-col items-center justify-center gap-1">
                   <img
@@ -107,7 +107,7 @@ export default function Academic() {
                 to={"/pages/academic/checklist"}
                 className="hover:scale-105 rounded-lg hover:shadow-sm hover:border flex items-center 
             justify-center cursor-pointer text-center text-gray-600 font-[500] duration-500 transition ease-in-out 
-            hover:bg-gradient-to-t from-slate-400 to-slate-300 hover:text-white"
+            hover:bg-gradient-to-t from-[#9e76b4] to-[#5eafd2] hover:text-white hover:no-underline"
               >
                 <div className="flex flex-col items-center justify-center gap-1">
                   <img
@@ -121,60 +121,63 @@ export default function Academic() {
                 </div>
               </Link>
             </div>
-            {/* banner section */}
-            <div className="my-5 shadow-md rounded-lg overflow-hidden">
-              <div className="bg-fixed sm:bg-local overflow-y-auto h-[300px] md:h-[500px] w-full">
-                <img
-                  className="object-cover "
-                  src="https://w1.med.cmu.ac.th/personnel/files/2022/03/Academic-Clinic.png"
-                  alt="not img"
-                />
-                <img
-                  className="object-cover "
-                  src="https://w1.med.cmu.ac.th/personnel/files/2022/03/Academic-Clinic.png"
-                  alt="not img"
-                />
-              </div>
-            </div>
-            {/* banner section */}
 
-            {/* Calendar section */}
-            <div className="mt-5 bg-white border shadow-sm rounded-lg p-2">
-              <h3>ตารางการจองคิว</h3>
-              <Calendar
-                onSelect={handleDateChange}
-                renderCell={(date) => {
-                  const bookingsForDate = getBookingsForDate(date);
-                  return bookingsForDate.length > 0 ? (
-                    <div className="flex flex-col items-center">
-                      {bookingsForDate.map((booking, index) => (
-                        <Badge
-                          key={index}
-                          content={booking.name}
-                          style={{
-                            backgroundColor: "#ffce45",
-                            color: "#000",
-                            margin: "2px",
-                          }}
-                        />
-                      ))}
-                    </div>
-                  ) : null;
-                }}
-              />
-              {selectedDate && (
-                <p>Selected Date: {selectedDate.toDateString()}</p>
-              )}
+            {/* content section */}
+            <div className="flex md:flex-row flex-col justify-between gap-5 mt-5">
+              {/* Row 1  */}
+
+              <iframe
+                src="https://o365cmu-my.sharepoint.com/personal/sophon_m_cmu_ac_th/_layouts/15/embed.aspx?UniqueId=b424e5dc-8591-48d1-98da-a55143c4c0a0"
+                className="flex flex-col items-center justify-center shadow-md rounded-lg w-full md:w-[120%] h-[750px] custom-scrollbar"
+                frameborder="0"
+                style={{ overflowY: "scroll" }}
+                allowFullScreen
+                title="info1"
+              ></iframe>
+
+              {/* End Row 1  */}
+
+              {/* Row 2  */}
+              <div className=" flex flex-col items-center justify-center bg-white border shadow-sm rounded-lg  h-[750px] w-full md:w-1/2 mb-36"></div>
+
+              {/* End Row 2  */}
             </div>
+            {/* Calendar section */}
+            <h3 className="text-[#9e76b4]">ปฏิทิน</h3>
+            <Calendar
+              onSelect={handleDateChange}
+              renderCell={(date) => {
+                const bookingsForDate = getBookingsForDate(date);
+                return bookingsForDate.length > 0 ? (
+                  <div className="flex flex-col items-center ">
+                    {bookingsForDate.map((booking, index) => (
+                      <Badge
+                        key={index}
+                        content={booking.name}
+                        style={{
+                          backgroundColor: "#ffce45",
+                          color: "#000",
+                          margin: "2px",
+                        }}
+                      />
+                    ))}
+                  </div>
+                ) : null;
+              }}
+            />
+            {selectedDate && (
+              <p>Selected Date: {selectedDate.toDateString()}</p>
+            )}
             {/* End of Calendar section */}
+            {/* content section */}
           </div>
         </div>
 
         <button
           className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-medium py-2 px-10 border-b-4 border-gray-700 hover:border-gray-500 
-  rounded fixed left-1/2 bottom-[70px] md:bottom-[85px] transform -translate-x-1/2 z-10 -hue-rotate-90 w-full md:w-auto text-xl "
+  rounded fixed left-1/2 bottom-[70px] md:bottom-[85px] transform -translate-x-1/2 z-10 -hue-rotate-90 w-full md:w-auto "
         >
-          <div className="flex items-center gap-3">
+          <div className="flex flex-col justify-center items-center gap-3">
             <i className="fa fa-list"></i>
             <div>จองคิวการใช้บริการการขอตำแหน่งทางวิชาการ</div>
           </div>

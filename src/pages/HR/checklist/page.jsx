@@ -1,8 +1,8 @@
-import Navbar from "../../component/navbar";
-import Footer from "../../component/footer";
-import Modal from "../../component/modal";
+import Navbar from "../../../component/navbar";
+import Footer from "../../../component/footer";
+import Modal from "../../../component/modal";
 import { useState } from "react";
-import { textTypeT5 } from "../../inc/ArrayText";
+import { textTypeT5 } from "../../../inc/ArrayText";
 import { Link } from "react-router-dom";
 
 export default function CheckList() {

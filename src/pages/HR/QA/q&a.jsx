@@ -1,5 +1,5 @@
-import Navbar from "../../component/navbar";
-import Footer from "../../component/footer";
+import Navbar from "../../../component/navbar";
+import Footer from "../../../component/footer";
 import { Link } from "react-router-dom";
 
 export default function QA() {

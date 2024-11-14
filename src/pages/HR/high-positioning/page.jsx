@@ -1,8 +1,8 @@
-import Navbar from "../../component/navbar";
-import Footer from "../../component/footer";
-import Modal from "../../component/modal";
+import Navbar from "../../../component/navbar";
+import Footer from "../../../component/footer";
+import Modal from "../../../component/modal";
 import { useState } from "react";
-import { textTypeT1, textTypeT2, textTypeT3 } from "../../inc/ArrayText";
+import { textTypeT1, textTypeT2, textTypeT3 } from "../../../inc/ArrayText";
 
 export default function HighPositioning() {
   const [titleModal, setTitleModal] = useState("");

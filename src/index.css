@@ -5,3 +5,22 @@
 * {
   font-family: "Athiti", sans-serif;
 }
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px; /* กำหนดความกว้าง Scrollbar */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #e2e8f0; /* สีพื้นหลังของ track */
+    border-radius: 6px; /* มุมโค้งของ track */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #9e76b4; /* สีของ Scrollbar */
+    border-radius: 6px; /* มุมโค้งของ Scrollbar */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #5eafd2; /* สีเมื่อ hover */
+  }
+}

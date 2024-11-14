@@ -1,5 +1,5 @@
-import Navbar from "../../component/navbar";
-import Footer from "../../component/footer";
+import Navbar from "../../../component/navbar";
+import Footer from "../../../component/footer";
 
 export default function Academic1() {
   return (

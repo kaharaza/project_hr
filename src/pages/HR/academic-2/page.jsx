@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Navbar from "../../component/navbar";
-import Footer from "../../component/footer";
+import Navbar from "../../../component/navbar";
+import Footer from "../../../component/footer";
 import { Link } from "react-router-dom";
-import { textTypeT4 } from "../../inc/ArrayText";
+import { textTypeT4 } from "../../../inc/ArrayText";
 
 export default function Academic2() {
   const [openGeneral, setOpenGeneral] = useState(false);
